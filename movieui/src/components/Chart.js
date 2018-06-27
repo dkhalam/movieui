@@ -18,21 +18,21 @@ class Chart extends Component {
 		return (
 			<div className="chart">
 				<Line
-				data={this.state.chartData}
-				width={100}
-				height={50}
-				options={{
-					title: {
-						display: this.props.displayTitle,
-						text: 'Total Movie Sales',
-						fontSize: 25
-					},
-					legend: {
-						display: this.props.displayLegend,
-					}
+					data={this.state.chartData}
+					width={100}
+					height={50}
+					options={{
+						// title: {
+						// 	display: this.props.displayTitle,
+						// 	text: 'Total Movie Sales',
+						// 	fontSize: 25
+						// },
+						// legend: {
+						// 	display: this.props.displayLegend,
+						// }
 
-				}}
-			/>
+					}}
+				/>
 			</div>
 		)
 	}

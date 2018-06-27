@@ -1,120 +1,160 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif; }
+  font-family: sans-serif;
+  background-color: lightgrey; }
 
-.App {
-  text-align: center; }
+.grid-container {
+  display: grid;
+  grid-template-areas: 'col col col col';
+  grid-gap: 20px;
+  padding: 20px; }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px; }
+.charts-head {
+  display: grid;
+  grid-template-areas: 'head head head head';
+  grid-gap: 20px;
+  padding: 20px; }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white; }
+.shows {
+  display: grid;
+  grid-template-areas: 'show show'; }
 
-.App-title {
-  font-size: 1.5em; }
+.charts-left {
+  grid-column: 1 / span 2; }
 
-.App-intro {
-  font-size: large; }
+.charts-right {
+  grid-column: 3 / span 2;
+  text-align: right; }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg); }
-  to {
-    transform: rotate(360deg); } }
+.chart-things {
+  grid-area: col;
+  background-color: white;
+  padding: 20px; }
+
+.first-stats {
+  grid-column: 1 / span 2;
+  background-color: white;
+  padding: 20px; }
+
+.second-stats {
+  grid-column: 3 / span 2;
+  background-color: white;
+  padding: 20px; }
+
+.charts-grid {
+  display: grid;
+  grid-template-areas: 'char char char char char char';
+  grid-gap: 10px;
+  padding: 10px;
+  align-items: center; }
+
+.line-chart {
+  grid-column: 1 / span 3; }
+
+.progress {
+  grid-column: 4 / span 3;
+  text-align: left; }
+
+progress {
+  width: 100%; }
+
+.show-third {
+  grid-column: 1;
+  grid-row: 1; }
+
+.button-third {
+  grid-column: 2;
+  grid-row: 1; }
+
+.show-fourth {
+  grid-column: 1;
+  grid-row: 2; }
+
+.button-fourth {
+  grid-column: 2;
+  grid-row: 2; }
+
+button {
+  border: none;
+  background-color: #008CBA;
+  color: white;
+  padding: 15px 30px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer; }
+
+canvas {
+  max-width: 75%; }
+
 * {
   box-sizing: border-box; }
 
-.row::after {
-  content: "";
-  clear: both;
-  display: table; }
+@media only screen and (max-width: 599px) and (min-width: 320px) {
+  /* For mobile: */
+  canvas {
+    max-width: 100%; }
 
-[class*="col-"] {
-  float: left;
-  padding: 15px; }
+  .chart-things {
+    grid-row: 1; }
 
-[class*="col-"] {
-  width: 100%; }
+  .charts-left {
+    grid-column: 1 / span 4;
+    grid-row: 1; }
 
-@media only screen and (min-width: 600px) {
-  /* For tablets: */
-  .col-s-1 {
-    width: 8.33%; }
+  .charts-right {
+    grid-column: 1 / span 4;
+    grid-row: 2;
+    text-align: left; }
 
-  .col-s-2 {
-    width: 16.66%; }
+  .line-chart {
+    grid-column: 1 / span 6;
+    grid-row: 1; }
 
-  .col-s-3 {
-    width: 25%; }
+  .progress {
+    grid-column: 1 / span 6;
+    grid-row: 2; }
 
-  .col-s-4 {
-    width: 33.33%; }
+  .first-stats {
+    grid-column: 1 / span 4;
+    grid-row: 2;
+    text-align: center; }
 
-  .col-s-5 {
-    width: 41.66%; }
+  .second-stats {
+    grid-column: 1 / span 4;
+    grid-row: 3;
+    text-align: center; }
 
-  .col-s-6 {
-    width: 50%; }
+  .show-third {
+    grid-column: 1/span 2;
+    grid-row: 1; }
 
-  .col-s-7 {
-    width: 58.33%; }
+  .button-third {
+    grid-column: 1/span 2;
+    grid-row: 2; }
 
-  .col-s-8 {
-    width: 66.66%; }
+  .show-fourth {
+    grid-column: 1/span 2;
+    grid-row: 3; }
 
-  .col-s-9 {
-    width: 75%; }
+  .button-fourth {
+    grid-column: 1/span 2;
+    grid-row: 4; } }
+@media only screen and (max-width: 1279px) and (min-width: 600px) {
+  /* For tablets and most laptops: */
+  canvas {
+    max-width: 90%; }
 
-  .col-s-10 {
-    width: 83.33%; }
+  .first-stats {
+    text-align: center; }
 
-  .col-s-11 {
-    width: 91.66%; }
-
-  .col-s-12 {
-    width: 100%; } }
-@media only screen and (min-width: 768px) {
+  .second-stats {
+    text-align: center; } }
+@media only screen and (min-width: 1280px) {
   /* For desktop: */
-  .col-1 {
-    width: 8.33%; }
-
-  .col-2 {
-    width: 16.66%; }
-
-  .col-3 {
-    width: 25%; }
-
-  .col-4 {
-    width: 33.33%; }
-
-  .col-5 {
-    width: 41.66%; }
-
-  .col-6 {
-    width: 50%; }
-
-  .col-7 {
-    width: 58.33%; }
-
-  .col-8 {
-    width: 66.66%; }
-
-  .col-9 {
-    width: 75%; }
-
-  .col-10 {
-    width: 83.33%; }
-
-  .col-11 {
-    width: 91.66%; }
-
-  .col-12 {
-    width: 100%; } }
+  canvas {
+    max-width: 75%; } }
 
 /*# sourceMappingURL=index.css.map */
