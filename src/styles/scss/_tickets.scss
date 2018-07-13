@@ -1,0 +1,27 @@
+/* Movie 1 & Movie 2 ticket box partial scss to be imported into main App file */
+.shows {
+  display: grid;
+  grid-template-areas: 'show show';
+}
+
+.first-stats {
+  grid-column: 1 / span 2;
+  background-color: white;
+  padding: $padding;
+}
+
+.second-stats {
+  grid-column: 3 / span 2;
+  background-color: white;
+  padding: $padding;
+}
+
+.show-third {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.show-fourth {
+  grid-column: 1;
+  grid-row: 2;  
+}

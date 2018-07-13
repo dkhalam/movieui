@@ -1,6 +1,8 @@
+// import the necessities
 import React, {Component} from 'react';
 import Button from './Button';
 
+// Tickets component to display showtimes and buttons for both movies
 function Tickets() {
   return (
   		<div className="shows">

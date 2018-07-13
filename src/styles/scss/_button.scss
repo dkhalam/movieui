@@ -1,0 +1,23 @@
+/* Button related partial scss to be imported into App.scss */
+
+button {
+    border: none;
+    background-color: #008CBA;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.button-third {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.button-fourth {
+  grid-column: 2;
+  grid-row: 2;
+}

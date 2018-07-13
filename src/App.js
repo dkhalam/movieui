@@ -1,23 +1,18 @@
+// Import our different modules necessary to run app
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import Chart from './components/Chart';
 import Button from './components/Button';
 import Tickets from './components/Tickets';
 
+// Define our main app component
 class App extends Component {
-  // constructor() {
-  //   super();
-  //   this.state = {
-  //     chartData: {
-        
-  //     }
-  //   }
-  // }
 
   componentWillMount() {
     this.getChartData();
   }
 
+  // establish our chart data which will be rendered
   getChartData() {
     this.setState({
       chartData:{
@@ -53,10 +48,11 @@ class App extends Component {
     })
   }
 
+  // Render into root DOM node
   render() {
     return (
       <div className="App grid-container">
-        <div className="grid-item chart-things">
+        <div className="grid-item chart-area">
           <div className="charts-head">
             <div className="charts-left">
               <h2>Total Movie Sales</h2>

@@ -1,3 +1,47 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
 body {
   margin: 0;
   padding: 0;
@@ -10,15 +54,12 @@ body {
   grid-gap: 20px;
   padding: 20px; }
 
+/* Chart container related partial scss to be imported into App.scss */
 .charts-head {
   display: grid;
   grid-template-areas: 'head head head head';
   grid-gap: 20px;
   padding: 20px; }
-
-.shows {
-  display: grid;
-  grid-template-areas: 'show show'; }
 
 .charts-left {
   grid-column: 1 / span 2; }
@@ -27,18 +68,8 @@ body {
   grid-column: 3 / span 2;
   text-align: right; }
 
-.chart-things {
+.chart-area {
   grid-area: col;
-  background-color: white;
-  padding: 20px; }
-
-.first-stats {
-  grid-column: 1 / span 2;
-  background-color: white;
-  padding: 20px; }
-
-.second-stats {
-  grid-column: 3 / span 2;
   background-color: white;
   padding: 20px; }
 
@@ -59,22 +90,30 @@ body {
 progress {
   width: 100%; }
 
+/* Movie 1 & Movie 2 ticket box partial scss to be imported into main App file */
+.shows {
+  display: grid;
+  grid-template-areas: 'show show'; }
+
+.first-stats {
+  grid-column: 1 / span 2;
+  background-color: white;
+  padding: 20px; }
+
+.second-stats {
+  grid-column: 3 / span 2;
+  background-color: white;
+  padding: 20px; }
+
 .show-third {
   grid-column: 1;
-  grid-row: 1; }
-
-.button-third {
-  grid-column: 2;
   grid-row: 1; }
 
 .show-fourth {
   grid-column: 1;
   grid-row: 2; }
 
-.button-fourth {
-  grid-column: 2;
-  grid-row: 2; }
-
+/* Button related partial scss to be imported into App.scss */
 button {
   border: none;
   background-color: #008CBA;
@@ -86,14 +125,19 @@ button {
   margin: 4px 2px;
   cursor: pointer; }
 
-canvas {
-  max-width: 75%; }
+.button-third {
+  grid-column: 2;
+  grid-row: 1; }
 
-* {
-  box-sizing: border-box; }
+.button-fourth {
+  grid-column: 2;
+  grid-row: 2; }
 
 @media only screen and (max-width: 599px) and (min-width: 320px) {
   /* For mobile: */
+  .grid-container {
+    padding: 0; }
+
   canvas {
     max-width: 100%; }
 

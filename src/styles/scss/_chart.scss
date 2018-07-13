@@ -1,0 +1,44 @@
+/* Chart container related partial scss to be imported into App.scss */
+
+.charts-head {
+  display: grid;
+  grid-template-areas: 'head head head head';
+  grid-gap: $padding;
+  padding: $padding;
+}
+
+.charts-left {
+  grid-column: 1 / span 2;
+}
+
+.charts-right {
+  grid-column: 3 / span 2;
+  text-align: right;
+}
+
+.chart-area {
+  grid-area: col;
+  background-color: white;
+  padding: $padding;
+}
+
+.charts-grid {
+  display: grid;
+  grid-template-areas: 'char char char char char char';
+  grid-gap: 10px;
+  padding: 10px;
+  align-items: center;
+}
+
+.line-chart {
+  grid-column: 1 / span 3;
+}
+
+.progress {
+  grid-column: 4 / span 3;
+  text-align: left;
+}
+
+progress {
+  width: 100%;
+}
