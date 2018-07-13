@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
+// Import potential chart types from node module
 import {Bar, Line, Pie} from 'react-chartjs-2';
 
+// Define chart component, pass in defaults, take data from App.js, render a line chart
 class Chart extends Component {
 	constructor(props){
 		super(props);

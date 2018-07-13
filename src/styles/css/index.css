@@ -141,7 +141,7 @@ button {
   canvas {
     max-width: 100%; }
 
-  .chart-things {
+  .chart-area {
     grid-row: 1; }
 
   .charts-left {
@@ -152,6 +152,9 @@ button {
     grid-column: 1 / span 4;
     grid-row: 2;
     text-align: left; }
+
+  .charts-grid {
+    padding: 0; }
 
   .line-chart {
     grid-column: 1 / span 6;

@@ -8,6 +8,7 @@ import Tickets from './components/Tickets';
 // Define our main app component
 class App extends Component {
 
+  // lifecycle hook, function runs when component loads
   componentWillMount() {
     this.getChartData();
   }
